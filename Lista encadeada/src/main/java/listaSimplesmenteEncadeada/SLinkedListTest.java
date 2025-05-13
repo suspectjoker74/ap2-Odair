@@ -1,8 +1,13 @@
-package tests;
+package listaSimplesmenteEncadeada;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import org.junit.jupiter.api.Test;
-import listaSimplesmenteEncadeada.*;
+
+import listaSimplesmenteEncadeada.EmptySLinkedList;
+
+import listaSimplesmenteEncadeada.SLinkedList;
 
 class SLinkedListTest {
 

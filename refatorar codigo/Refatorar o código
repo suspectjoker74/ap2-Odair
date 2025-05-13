@@ -1,0 +1,36 @@
+ public class ArrayCopier {
+
+    public static void main(String[] args) {
+        int[] originalArray = { 7, 4, 8, 1, 4, 1, 4 };
+        float[] copiedArray = copyUntilValue(originalArray, 1);
+
+        printArray("originalArray", originalArray);
+        printArray("copiedArray", copiedArray);
+    }
+
+    private static float[] copyUntilValue(int[] source, int stopValue) {
+        float[] result = new float[source.length];
+        int i = 0;
+        while (i < source.length && source[i] != stopValue) {
+            result[i] = source[i];
+            i++;
+        }
+        return result;
+    }
+
+    private static void printArray(String label, int[] array) {
+        System.out.print(label + ": [ ");
+        for (int value : array) {
+            System.out.print(value + " ");
+        }
+        System.out.println("]");
+    }
+
+    private static void printArray(String label, float[] array) {
+        System.out.print(label + ": [ ");
+        for (float value : array) {
+            System.out.print(value + " ");
+        }
+        System.out.println("]");
+    }
+}

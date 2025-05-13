@@ -3,7 +3,7 @@ package listaSimplesmenteEncadeada;
 public class SLinkedList {
     protected Node head;
     protected Node tail;
-    protected long size;
+    protected int size;
 
     public SLinkedList() {
         head = tail = null;
@@ -13,7 +13,11 @@ public class SLinkedList {
     public void addHead(String s) {
         Node newNode = new Node(s, head);
         head = newNode;
-        if (size == 0) tail = head;
+        
+        if (size == 0) {
+            tail = head;
+        }
+
         size++;
     }
 
@@ -30,7 +34,7 @@ public class SLinkedList {
 
     public void removeFirst() {
         if (size == 0) {
-            throw new EmptySLinkedList("Lista está vazia.");
+            throw new EmptySLinkedList("Lista vazia.");
         }
         Node temp = head;
         head = head.getNext();
@@ -39,7 +43,6 @@ public class SLinkedList {
         if (size == 0) tail = null;
     }
 
-    @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("[");
